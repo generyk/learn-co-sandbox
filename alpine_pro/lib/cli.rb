@@ -1,7 +1,4 @@
-require_relative 'mountain.rb'
-require_relative 'scraper.rb'
-require 'colorize'
-require 'readline'
+
 
 module AlpinePro
   class CLI 
