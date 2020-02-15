@@ -1,19 +1,21 @@
 class AlpinePro::Mountain
   
-  attr_accessor :name, :elevation, :description
+  attr_accessor :name
   
   @@all = []
   
-  def initialize 
-    @@all << self 
+  def initialize(name) 
+    @name = name 
+    save 
   end 
   
   def self.all
+    AlpinePro::Scraper.scrape_mountains if @@all.empty?
     @@all
   end 
   
-  def self.find(id)
-    self.all[id-1]
+  def save
+    @@all << self 
   end 
   
 end 

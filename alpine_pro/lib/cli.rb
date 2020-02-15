@@ -3,6 +3,7 @@
     #Program begins by running the list_mountains method 
     def start 
       greeting
+      get_mountains
       list_mountains
     end 
   
@@ -14,13 +15,13 @@
       puts ""
     end 
     
+    def get_mountains
+      @mountains = AlpinePro::Mountain.all
+    end 
+    
     def list_mountains
-      AlpinePro::Scraper.scrape_mountains
-      AlpinePro::Mountain.all.each.with_index(1) do |mountain, i|
-        if i <= 10 
-          puts "#{i}. #{mountain.name}"
-        end 
+      @mountains.each.with_index(1) do |mountain, i|
+        puts "#{i}. #{mountain.name}"
       end 
-      puts ""
     end 
 end 
