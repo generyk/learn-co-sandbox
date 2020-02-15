@@ -1,8 +1,10 @@
 require "alpine_pro/version"
-require "alpine_pro/cli"
-require "alpine_pro/scraper"
+require_relative './alpine_pro/cli'
+require_relative './alpine_pro/scraper'
 require 'open-uri'
 require 'nokogiri'
+require 'pry'
+
 
 module AlpinePro
   class Error < StandardError; end

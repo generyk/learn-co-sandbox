@@ -1,5 +1,4 @@
-module AlpinePro
-  class CLI 
+  class AlpinePro::CLI 
     
     #Program begins by running the list_mountains method 
     def start 
@@ -16,6 +15,6 @@ module AlpinePro
     end 
     
     
-    
+  
   end 
 end 
