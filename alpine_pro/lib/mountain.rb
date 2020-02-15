@@ -10,7 +10,6 @@ class AlpinePro::Mountain
   end 
   
   def self.all
-    AlpinePro::Scraper.scrape_mountains if @@all.empty?
     @@all
   end 
   

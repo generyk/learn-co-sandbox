@@ -10,13 +10,13 @@
     #Greeting 
     def greeting 
       puts ""
-      puts "Hello Explorer! Please select a mountain to learn more about."
-      puts "\n/ / /  Select a mountain from 1 - 10 / / / " 
+      puts "Hello Explorer! Please Select a Mountain to Learn More About."
+      puts "\n/ / /  Select a Mountain from 1 - 10 / / / " 
       puts ""
     end 
     
     def get_mountains
-      @mountains = AlpinePro::Mountain.all
+      AlpinePro::Scraper.scrape_mountains
     end 
     
     def list_mountains
