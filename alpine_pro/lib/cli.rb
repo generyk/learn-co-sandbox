@@ -16,11 +16,11 @@
     end 
     
     def get_mountains
-      AlpinePro::Scraper.scrape_mountains
+       AlpinePro::Scraper.scrape_mountains
     end 
     
     def list_mountains
-      @mountains.each.with_index(1) do |mountain, i|
+      AlpinePro::Mountain.all.each.with_index(1) do |mountain, i|
         puts "#{i}. #{mountain.name}"
       end 
     end 
