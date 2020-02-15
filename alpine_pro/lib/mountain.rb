@@ -12,4 +12,8 @@ class AlpinePro::Mountain
     @@all
   end 
   
+  def self.find(id)
+    self.all[id-1]
+  end 
+  
 end 

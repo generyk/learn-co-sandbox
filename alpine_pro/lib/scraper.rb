@@ -10,7 +10,6 @@ class AlpinePro::Scraper
     doc.css("div.c-content-builder__header--2 h2").each do |m|
       name = m.text 
       mountain = AlpinePro::Mountain.new(name)
-      binding.pry
     end
   end
 end 
