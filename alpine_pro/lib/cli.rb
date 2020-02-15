@@ -8,13 +8,12 @@
     #Greeting 
     def list_mountains
       puts ""
-      puts "Hello Explorer! Please select a mountain to learn more about.".black.bold
-      puts "\n/\/\/\ Select an altitude from 1 - 10 /\/\/\ ".blue.bold 
+      puts "Hello Explorer! Please select a mountain to learn more about."
+      puts "\n/\/\/\ Select a mountain from 1 - 10 /\/\/\ " 
       puts ""
       
     end 
     
     
-  
-  end 
+
 end 
