@@ -1,6 +1,6 @@
 class AlpinePro::Mountain
   
-  attr_accessor :name
+  attr_accessor :name, :altitude
   
   @@all = []
   
