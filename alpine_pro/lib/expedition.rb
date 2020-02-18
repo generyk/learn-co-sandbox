@@ -3,8 +3,9 @@ class AlpinePro::Expedition
   
   @@all = []
   
-  def initialize(name)
+  def initialize(name, description)
     @name = name 
+    @description = description 
     save 
   end 
   
