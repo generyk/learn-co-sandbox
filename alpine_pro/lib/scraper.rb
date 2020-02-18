@@ -1,22 +1,22 @@
 class AlpinePro::Scraper
   
-  def self.scrape_mountains 
-    index_page = Nokogiri::HTML(open("https://www.thegentlemansjournal.com/article/top-10-mountains-to-climb-around-the-world/"))
+  def self.scrape_expeditions 
+    index_page = Nokogiri::HTML(open("https://www.adventureconsultants.com/expeditions/"))
     
-    array_of_mountains = index_page.css(".c-content-builder__header--2.o-wrapper.o-wrapper--reading.o-wrapper--reading-left")
+    array_of_expeditions = index_page.css("span.slide__title.uppercase")
     
-    array_of_mountains.each do |mountain_card|
-    name = mountain_card.text 
-    mountain = AlpinePro::Mountain.new(name) 
-    end 
+    array_of_expeditions.each_with_index do |expedition_card|
+    name = expedition_card.text 
+    expedition = AlpinePro::Expedition.new(name)
+     end 
   end 
-  
-  def self.scrape_description(mountain)
-    index_page = Nokogiri::HTML(open("https://www.thegentlemansjournal.com/article/top-10-mountains-to-climb-around-the-world/"))
-  
-  end 
-end 
  
+  def self.scrape_description(expedition)
+  description_page = Nokogiri::HTML(open("https://www.adventureconsultants.com/expeditions/seven-summits/everest/"))
+  descriptions = expedition_card.search("div.body-content").text 
+  end 
+  
+end 
 
 
     

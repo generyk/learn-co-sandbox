@@ -4,7 +4,7 @@ require 'open-uri'
 require 'nokogiri'
 require_relative './cli'
 require_relative './scraper'
-require_relative './mountain'
+require_relative './expedition'
 
 
 module AlpinePro

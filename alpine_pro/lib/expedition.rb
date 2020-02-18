@@ -1,5 +1,5 @@
-class AlpinePro::Mountain
-  attr_accessor :name 
+class AlpinePro::Expedition
+  attr_accessor :name, :description
   
   @@all = []
   
