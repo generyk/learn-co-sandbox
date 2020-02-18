@@ -10,6 +10,11 @@ class AlpinePro::Scraper
     mountain = AlpinePro::Mountain.new(name) 
     end 
   end 
+  
+  def self.scrape_description(mountain)
+    index_page = Nokogiri::HTML(open("https://www.thegentlemansjournal.com/article/top-10-mountains-to-climb-around-the-world/"))
+  
+  end 
 end 
  
 
