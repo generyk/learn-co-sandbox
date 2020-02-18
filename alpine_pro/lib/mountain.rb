@@ -1,19 +1,18 @@
 class AlpinePro::Mountain
-  
-  attr_accessor :name, :altitude
+  attr_accessor :name 
   
   @@all = []
   
-  def initialize(name) 
+  def initialize(name)
     @name = name 
     save 
   end 
   
-  def self.all
-    @@all
+  def self.all 
+    @@all 
   end 
   
-  def save
+  def save 
     @@all << self 
   end 
   
