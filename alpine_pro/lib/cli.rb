@@ -9,7 +9,6 @@
       AlpinePro::Scraper.scrape_expeditions
       list_expeditions
       get_expedition
-      want_description(expedition)
     end 
     
     def list_expeditions
@@ -38,6 +37,8 @@
     end 
     
     def want_description(expedition)
+      
+      expedition.description = AlpinePro::Scraper.scrape_description(expedition.path)
       puts ""
       puts "Do You Want To Continue (Y/N)"
       input = gets.strip.upcase
@@ -46,7 +47,10 @@
         input = gets.strip.upcase
       end 
       if input == "Y"
-        puts expedition.description 
+        puts ""
+        puts "/////////  Your Next Adventure: #{expedition.name}  /////////"
+        puts ""
+        puts expedition.description
       else 
         puts "you ended"
       end 

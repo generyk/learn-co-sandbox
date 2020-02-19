@@ -1,11 +1,11 @@
 class AlpinePro::Expedition
-  attr_accessor :name, :description
+  attr_accessor :name, :path, :description 
   
   @@all = []
   
-  def initialize(name, description)
+  def initialize(name, path)
     @name = name 
-    @description = description 
+    @path = path 
     save 
   end 
   

@@ -7,8 +7,7 @@ class AlpinePro::Scraper
     array_of_expeditions.each_with_index do |expedition_card|
     name = expedition_card.css("span.slide__title.uppercase").text
     path = expedition_card.css("a").attr("href").value
-    description = self.scrape_description(path)
-    AlpinePro::Expedition.new(name, description)
+    AlpinePro::Expedition.new(name, path)
      end 
   end 
  
