@@ -1,5 +1,6 @@
   class AlpinePro::CLI 
   
+  #welcome method, calls on scraper to list expedition names
     def start 
       puts ""
       puts "Welcome to Alpine-Pro!"
@@ -11,12 +12,14 @@
       get_expedition
     end 
     
+  #list method turns the expeditions into a list with index 
     def list_expeditions
       AlpinePro::Expedition.all.each.with_index(1) do |expedition, index|
         puts "#{index}. #{expedition.name}"
       end 
     end 
     
+  #get method outputs the expedition list  and receives user input
     def get_expedition
       puts ""
       puts "////////////////////////////////////////////////////////////////"
@@ -36,6 +39,7 @@
       end 
     end 
     
+    #description method receives the descriptions from the scraper class
     def want_description(expedition)
       
       expedition.description = AlpinePro::Scraper.scrape_description(expedition.path)
@@ -55,5 +59,6 @@
         puts "you ended"
       end 
     end 
+      
    
 end 

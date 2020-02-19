@@ -1,4 +1,5 @@
 class AlpinePro::Expedition
+
   attr_accessor :name, :path, :description 
   
   @@all = []

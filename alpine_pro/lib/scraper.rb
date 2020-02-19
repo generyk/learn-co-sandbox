@@ -1,5 +1,6 @@
 class AlpinePro::Scraper
   
+#scraping of expedition names and the url to be initialized with the expedition
   def self.scrape_expeditions 
     index_page = Nokogiri::HTML(open("https://www.adventureconsultants.com/expeditions/"))
     
@@ -11,6 +12,7 @@ class AlpinePro::Scraper
      end 
   end 
  
+ #scraping of description from url it was initialized with 
   def self.scrape_description(expedition)
   description_page = Nokogiri::HTML(open("https://www.adventureconsultants.com"+ expedition))
   description_page.search("div#body-content").text.strip  
@@ -18,6 +20,7 @@ class AlpinePro::Scraper
   
 end 
 
+  
 
     
         
