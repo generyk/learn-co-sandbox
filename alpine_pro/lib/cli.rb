@@ -33,6 +33,7 @@
       puts "///  You Chose: #{expedition.name}  ///"
       want_description(expedition)
       elsif input == "exit"
+      abort("Happy Climbing!")
       else 
         puts "Sorry I didn't understand that command"
         get_expedition
@@ -55,10 +56,24 @@
         puts "/////////  Your Next Adventure: #{expedition.name}  /////////"
         puts ""
         puts expedition.description
+        list_again 
       else 
-        puts "you ended"
+        abort("Happy Climbing!")
       end 
     end 
       
+      def list_again
+        puts "Enter 'list' to see all expeditions again or Enter 'exit' to exit the program."
+      input = gets.strip.downcase
+      if input == "list"
+        list_expeditions
+        get_expedition 
+      elsif input == "exit"
+      abort("Happy Climbing!")
+     else 
+       puts "Sorry I didn't understand that command"
+        list_again
+       end 
+      end 
    
 end 
